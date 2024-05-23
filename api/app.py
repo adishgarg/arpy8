@@ -10,9 +10,9 @@ app = FastAPI(title="api for my dynamic readme")
 
 
 def get_scrobbles():
-    r = requests.get("https://www.last.fm/user/arpy8")
+    r = requests.get("https://www.last.fm/user/adishgarg")
     soup = BeautifulSoup(r.content)
-    header_elements = soup.find_all('a', attrs={'href':'/user/arpy8/library'})
+    header_elements = soup.find_all('a', attrs={'href':'/user/adishgarg/library'})
 
     return header_elements[1].text
 
